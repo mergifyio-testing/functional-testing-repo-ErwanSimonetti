@@ -1,0 +1,6 @@
+pull_request_rules:
+- actions:
+    undraft: {}
+  conditions:
+  - base=20211019090120/test_pr_to_draft/main
+  name: convert Pull Request to Draft
