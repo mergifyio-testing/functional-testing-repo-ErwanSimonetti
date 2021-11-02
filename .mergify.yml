@@ -1,7 +1,6 @@
 pull_request_rules:
 - actions:
-    edit:
-      draft: true
+    edit: false
   conditions:
   - base=20211102095155/test_pr_to_draft_edit/main
   name: convert Pull Request to Draft
