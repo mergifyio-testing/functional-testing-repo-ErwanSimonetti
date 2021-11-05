@@ -1,0 +1,7 @@
+pull_request_rules:
+- actions:
+    comment:
+      message: commits unverified
+  conditions:
+  - 'commits-unverified=test_one_commit_unverified: pull request n1 from fork'
+  name: commits-unverified
