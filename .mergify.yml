@@ -1,0 +1,7 @@
+pull_request_rules:
+- actions:
+    comment:
+      message: review-threads-unresolved comment
+  conditions:
+  - review-threads-unresolved=yves_testing_file:1
+  name: resolved-threads
