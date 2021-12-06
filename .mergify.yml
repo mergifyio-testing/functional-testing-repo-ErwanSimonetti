@@ -1,0 +1,7 @@
+pull_request_rules:
+- actions:
+    comment:
+      message: review-threads-resolved comment showing success
+  conditions:
+  - review-threads-resolved="why are you still writing `foo` here ?"
+  name: resolved-threads
