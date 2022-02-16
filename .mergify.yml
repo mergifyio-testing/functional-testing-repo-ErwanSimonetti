@@ -1,0 +1,7 @@
+pull_request_rules:
+- actions:
+    comment:
+      message: repository name full (wrong)
+  conditions:
+  - repository-name-full!=functional-testing-repo-ErwanSimonetti
+  name: no-draft
