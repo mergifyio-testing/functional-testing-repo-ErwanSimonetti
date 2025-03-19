@@ -1,0 +1,14 @@
+merge_protections_settings:
+  reporting_method: deployments
+pull_request_rules:
+- actions:
+    comment:
+      message: Deployment succeeded!
+  conditions:
+  - deployment-success
+  name: Deployment Success Rule
+queue_rules:
+- allow_inplace_checks: false
+  merge_conditions:
+  - check-success=ci
+  name: default
