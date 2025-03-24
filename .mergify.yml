@@ -1,0 +1,16 @@
+merge_protections_settings:
+  reporting_method: deployments
+pull_request_rules:
+- actions:
+    comment:
+      message: Deployment succeeded!
+  conditions:
+  - deployment-success=Mergify Merge Protections
+  - deployment-success=Successful Deployment
+  name: Deployment Success Rule
+- actions:
+    comment:
+      message: Deployment failed...
+  conditions:
+  - deployment-failure=Failed Deployment
+  name: Deployment Failure Rule
