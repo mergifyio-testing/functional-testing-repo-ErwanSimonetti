@@ -1,0 +1,36 @@
+merge_protections_settings:
+  reporting_method: deployments
+pull_request_rules:
+- actions:
+    queue:
+      name: default with inplace
+      update_bot_account: mergify-test4
+      update_method: rebase
+  conditions:
+  - base=20250402130909/test_queue_with_merge_protection_check_as_deployment/main
+  - label=queue-rebase
+  name: queue inplace rebase
+- actions:
+    queue:
+      name: default with inplace
+  conditions:
+  - base=20250402130909/test_queue_with_merge_protection_check_as_deployment/main
+  - label=queue-merge
+  name: queue inplace merge
+- actions:
+    queue:
+      name: default no inplace
+  conditions:
+  - base=20250402130909/test_queue_with_merge_protection_check_as_deployment/main
+  - label=queue-draft
+  name: queue draft pr
+queue_rules:
+- autosquash: true
+  conditions:
+  - base=20250402130909/test_queue_with_merge_protection_check_as_deployment/main
+  name: default with inplace
+- allow_inplace_checks: false
+  autosquash: true
+  conditions:
+  - base=20250402130909/test_queue_with_merge_protection_check_as_deployment/main
+  name: default no inplace
